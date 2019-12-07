@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Timerek"
         mc:Ignorable="d"
-        Title="MainWindow" Height="239.682" Width="728.3">
+        Title="Timerek" Height="239.682" Width="728.3">
     <Grid>
-        
+        <Slider HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="702"/>
+
     </Grid>
 </Window>
