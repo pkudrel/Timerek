@@ -1,2 +1,2 @@
 # Timerek
-A Windows application for hibernation / system shutdown after period of time
+A Windows application for hibernation or system shutdown after period of time
