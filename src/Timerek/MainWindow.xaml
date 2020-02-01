@@ -5,9 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Timerek"
         mc:Ignorable="d"
-        Title="Timerek" Height="150" Width="730">
+        Title="Timerek" Height="150" Width="730" ResizeMode="CanMinimize">
     <Grid>
-        <Slider HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="701"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+
+        </Grid.RowDefinitions>
+        <Label x:Name="LabelInfo" Content="Text" Margin="10,0,10,5" VerticalAlignment="Top"
+               HorizontalContentAlignment="Stretch" Grid.Row="0" FontSize="16" />
+
+
+        <Slider Margin="10,0,10,0" VerticalAlignment="Top" Maximum="360"
+                IsSnapToTickEnabled="True"
+                TickFrequency="1"
+                x:Name="TimeSlider"
+                HorizontalContentAlignment="Stretch" Grid.Row="1" ValueChanged="RangeBase_OnValueChanged" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,20,10,0" HorizontalAlignment="Left">
+            <Button Content="Start" Margin="0,0,10,0" Width="80" />
+            <Button Content="Cancel" Margin="0,0,10,0" Width="80" />
+
+        </StackPanel>
 
     </Grid>
 </Window>
