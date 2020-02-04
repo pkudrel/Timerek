@@ -22,11 +22,31 @@
                 TickFrequency="1"
                 x:Name="TimeSlider"
                 HorizontalContentAlignment="Stretch" Grid.Row="1" ValueChanged="RangeBase_OnValueChanged" />
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,20,10,0" HorizontalAlignment="Left">
-            <Button Content="Start" Margin="0,0,10,0" Width="80" />
-            <Button Content="Cancel" Margin="0,0,10,0" Width="80" />
 
-        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
 
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="10,20,10,0" HorizontalAlignment="Left">
+                <Button Content="Start" Margin="0,0,10,0" Width="80" />
+                <Button Content="Cancel" Margin="0,0,10,0" Width="80" />
+
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="10,20,10,0" HorizontalAlignment="Right">
+                <Label x:Name="VersionLabel" FontSize="10" IsEnabled="False">v1.0.0</Label>
+
+                <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        x:Name="ScanSelectedButton"
+                        Focusable="True"
+                        HorizontalAlignment="Right" Margin="10,2,2,2">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Gfx/Icons/settings.png" Height="15" Width="15" />
+
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
